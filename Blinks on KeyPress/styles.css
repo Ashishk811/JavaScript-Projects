@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.first-row, .second-row, .third-row, .forth-row, .fifth-row, .sixth-row{
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    gap: 10px;
+    padding: 5px 20px;
+}
+
+
+.keyboard button {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.keyboard button:hover {
+    background-color: #ccc;
+}
+
+.keyboard #Space {
+    grid-column: span 6; /* Spacebar will span 7 columns */
+}
+
+#Backspace ,#Tab, #CapsLock, #Enter{
+    grid-column: span 2;
+}
+#ShiftLeft, #ShiftRight{
+    grid-column: span 2;
+}
