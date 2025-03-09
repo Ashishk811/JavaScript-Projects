@@ -46,7 +46,7 @@ body {
   align-items: center;
 }
 
-.btn-section button{
+.btn-section button, .reset{
   height: 45px;
   width: 120px;
   border-radius: 5px;
@@ -57,7 +57,7 @@ body {
   cursor: pointer;
 }
 
-.btn-section button:hover{
+.btn-section button:hover , .reset:hover{
   background-color: rgb(85, 84, 84);
   color: white;
   

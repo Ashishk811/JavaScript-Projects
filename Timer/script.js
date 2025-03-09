@@ -9,9 +9,7 @@ function totalSecondsCalculate(){
 	return (hours * 3600) + (minutes * 60) + seconds;
 }
 
-function displayCountdown(){
-	const display = document.getElementById('countdown');
-	
+function displayCountdown(){	
 	let hrs = Math.floor(totalSeconds / 3600);
 	let mins = Math.floor((totalSeconds % 3600) / 60);
 	let secs = Math.floor(totalSeconds % 60);
@@ -20,7 +18,7 @@ function displayCountdown(){
 	mins = mins < 10 ? "0" + mins : mins;
 	secs = secs < 10 ? "0" + secs : secs;
 
-	display.innerText = hrs + ":" + mins + ":" + secs;	  
+	document.getElementById('countdown').innerText = hrs + ":" + mins + ":" + secs;	  
 }
 
 function startCountdown() {
@@ -64,4 +62,13 @@ function inputValueToNull(){
 	document.getElementById('hours').value=null;
 	document.getElementById('minutes').value=null;
 	document.getElementById('seconds').value=null;
+}
+
+
+function resetTimer(){
+	totalSeconds=0;
+	clearInterval(countdownInterval);
+	countdownInterval=null;
+	inputValueToNull();
+	document.getElementById('countdown').innerText = "00" + ":" + "00" + ":" + "00";	
 }
