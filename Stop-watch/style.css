@@ -1,0 +1,33 @@
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.display {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 0.75rem;
+    border: none;
+}
+
+.laps {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
